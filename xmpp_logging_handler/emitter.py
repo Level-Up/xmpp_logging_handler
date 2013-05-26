@@ -4,8 +4,8 @@ import xmpp
 class Send():
 
     def __init__(self, to, message, config_dict):
-        client = xmpp.Client(host)
-        client.connect(server=(config_dict['host'], config_dict['port']))
+        client = xmpp.Client(config_dict['host'])
+        client.connect(server=(config_dict['server'], config_dict['port']))
         client.auth(config_dict['username'],
                     config_dict['password'],
                     config_dict['name'])
