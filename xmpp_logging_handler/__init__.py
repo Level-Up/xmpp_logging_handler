@@ -1,11 +1,29 @@
 import logging
 from emitter import Send
-"""
-from xmpp_logging_handler import XMPPHandler
 
-"""
+VERSION = '1.0.1'
+AUTHOR = 'Raymond McGinlay'
+EMAIL = "raymond@thisislevelup.com"
+URL = 'htpp://www.thisislevelup.com/'
+
 
 class XMPPHandler(logging.Handler):
+    """
+    XMPPHandler for Python logging
+    ------------------------------
+
+    Usage example, assumes gmail.com account.
+
+    ::
+
+        from xmpp_logging_handler import XMPPHandler
+        import logging
+        logger = logging.getLogger()
+        myHandler = XMPPHandler('SENDING_USER', 'SENDING_PASSWORD', ['raymond@thisislevelup.com',],)
+        logger.addHandler(myHandler)
+        logging.error('Its broken')
+
+    """
 
     def __init__(self,
                  username=False,
@@ -14,7 +32,7 @@ class XMPPHandler(logging.Handler):
                  host='gmail.com',
                  server='talk.google.com',
                  port=5223,
-                 name='python_log_bot'):
+                 name='botty'):
         self.config_dict = {'username': username,
                             'password': password,
                             'host': host,
