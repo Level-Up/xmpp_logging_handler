@@ -4,7 +4,7 @@ setup(
     name="xmpp_logging_handler",
     author='Raymond McGinlay',
     author_email='Raymond McGinlay',
-    url='http://www.thisislevelup.com/',
+    url='https://github.com/Level-Up/xmpp_logging_handler',
     version='1.0.2',
     packages=['xmpp_logging_handler', ],
     install_requires=[
